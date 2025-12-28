@@ -51,6 +51,8 @@ dependencies {
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
     implementation(libs.firebase.database)
+    implementation("com.google.firebase:firebase-auth:22.3.1")
+    implementation("com.google.accompanist:accompanist-systemuicontroller:0.32.0")
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
