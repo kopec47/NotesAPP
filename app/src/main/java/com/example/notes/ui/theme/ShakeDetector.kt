@@ -7,7 +7,7 @@ import android.hardware.SensorManager
 import kotlin.math.sqrt
 
 class ShakeDetector(
-    private val shakeThreshold: Float = 12f, // próg w m/s^2
+    private val shakeThreshold: Float = 1.8f, // próg w m/s^2
     private val cooldown: Long = 1000L,       // 1 sekunda między wstrząsami
     private val onShake: () -> Unit
 ) : SensorEventListener {

@@ -59,7 +59,7 @@ class MainActivity : ComponentActivity(), SensorEventListener {
     // Stan aplikacji
     private var isDarkTheme by mutableStateOf(false)
 
-    // Ważne: Stan zalogowania użytkownika. Null = jeszcze nie zalogowany/ładuje się
+    // Stan zalogowania użytkownika. Null = jeszcze nie zalogowany/ładuje się
     private var currentUserUid by mutableStateOf<String?>(null)
 
     private var editingNoteId: String? = null
@@ -141,7 +141,6 @@ class MainActivity : ComponentActivity(), SensorEventListener {
     private fun setupDatabaseForUser(uid: String) {
 
         // Zapisuje notatki w: notes -> UID_UŻYTKOWNIKA -> notatki
-        // Dzięki temu User A nie widzi notatek Usera B, a reguły Firebase są spełnione.
         activeNotesRef = database.getReference("notes").child(uid)
 
         // Aktualizuje stan Compose, żeby odświeżyć widok
